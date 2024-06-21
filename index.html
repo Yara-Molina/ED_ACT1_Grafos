@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafos</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="./src/controllers/scrip.mjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-minimal/minimal.css">
+</head>
+<body>
+    <h1>Grafos</h1>
+    <img src="src/imagen/taller-tortillas-maiz-589x392.avif" alt="imagen de grafo" id="grafoImagen">
+    
+    <div class="form-container">
+        <h2>Agregar punto</h2>
+        <form id="vertForm">
+            <input type="text" id="vertInput" placeholder="Nombre del Vértice">
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+    
+    <div class="form-container">
+        <h2>Agregar distancia</h2>
+        <form id="weightForm1">
+            <h3>Punto de inicio:</h3>
+            <input type="text" id="startInput1" placeholder="home1">
+            <h3>Punto final:</h3>
+            <input type="text" id="endInput" placeholder="home2">
+            <h3>Peso:</h3>
+            <input type="number" id="weightInput" placeholder="0">
+            <button type="submit">Agregar</button>
+        </form>
+    </div>
+    <div class="form-container">
+        <h2>Recorrido en Profundidad</h2>
+        <button id="dfsButton">Realizar</button>
+        <div id="dfsResultContainer"></div>
+    </div>
+    <div id="resultContainer"></div>
+    <div class="form-container">
+        <h2>Ruta más corta</h2>
+        <form id="shortestPathForm">
+            <h3>Punto a calcular:</h3>
+            <input type="text" id="startInput2" placeholder="home1">
+            <button id="shortestPathButton">Calcular Ruta Más Corta</button>
+        </form>
+        <div id="shortestPathResultContainer"></div>
+    </div>
+</body>
+</html>
+
